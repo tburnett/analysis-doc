@@ -8,11 +8,11 @@ The use case that this framework was generated involves a data analysis situatio
 The three components are then:
 
 * a _dataset_, perhaps one of many
-* a set of _models_ to represent the data in  the dataset. In my work, these are detailed fits to gamma-ray data. All models for a given dataset are in a folder, containing also a file “config.json” to specify parameters. All the files for each model are in a folder, which must contain a configuration file, with parameters used to create the model, also named "config.json“.
+* a set of _models_ to represent the data in  the dataset. In my work, these are detailed fits to gamma-ray data. All models for a given dataset are in a folder, may contain a file “config.yaml” to specify parameters applying to all models. The files for each model are in subfolder, with the name of the model, which must contain a "config.yaml" configuration file, with parameters used to create the model, 
 * A set of _analyses_ to make plots and summaries of each model. Each such produces an HTML document. An individual analysis is represented by a python module containing a class inheriting from AnalysisBase
 Each analysis generates one or more plots, which correspond to functions in the class.
 
-So there is a potential HTML document for each analysis, applied to each model. Creation of a document also generates an HTML index.
+So there is a potential HTML document for each analysis, applied to each model. Creation of a document also generates an HTML index file.
 
 ## About this repository
 The code and example here are a very limited version of what I actually use, to demonstate the principle. The current code can be found
